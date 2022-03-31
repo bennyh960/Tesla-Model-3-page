@@ -1,0 +1,69 @@
+*{
+    font-size: 62.5%;
+}
+
+#speedometer {
+    display: inline-block;
+    position: relative;
+    transform: scale(0.23);
+    margin: 0;
+    stroke: none;
+    stroke-opacity: 0;
+}
+
+#speedometer .barometer {
+    /* stroke-opacity: 0;
+    stroke: none; */
+    position: sticky;
+    background-image: url("../images/speedometer/outer.svg");
+    background-repeat: no-repeat;
+    /* width: 200px; */
+    width: 20rem;
+    height: 11rem;
+    display: inline-block;
+    opacity: 0.8;
+}
+#speedometer .inner-circle {
+    /* stroke-opacity: 0;
+    stroke: none; */
+    position: sticky;
+    left: -50%;
+    background-image: url("../images/speedometer/inner.svg");
+    background-repeat: no-repeat;
+    width: 17rem;
+    height: 9rem;
+    z-index: -1;
+    display: inline-block;
+    opacity: 0.2;
+    }
+    
+    #speedometer .needle {
+    /* stroke-opacity: 0;
+    stroke: none; */
+    background-image: url("../images/speedometer/needle.svg");
+    background-repeat: no-repeat;
+    z-index: 999999;
+    width: 20rem;
+    height: 11rem;
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+    bottom: 0.5rem;
+    opacity: 0.8;
+    transform: rotate(90deg);
+    animation:
+    change 3s linear,
+        loop 1s linear 0.5s alternate;
+    transform-origin:50% calc(100% - 0.8rem) ;
+    }
+    @keyframes change {
+    0% {
+        transform:rotate(-90deg);
+    }
+    50% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(90deg);
+    }
+    }
