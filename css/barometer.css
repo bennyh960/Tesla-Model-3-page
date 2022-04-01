@@ -1,5 +1,5 @@
 *{
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
 }
 
 #speedometer {
@@ -9,6 +9,8 @@
     margin: 0;
     stroke: none;
     stroke-opacity: 0;
+    /* transform: translateX(-10px); */
+    left: -100px;
 }
 
 #speedometer .barometer {
@@ -22,8 +24,12 @@
     height: 11rem;
     display: inline-block;
     opacity: 0.8;
+    border: gold 2px solid;
+    transform: translateY(100px);
+    
 }
 #speedometer .inner-circle {
+    transform: translateY(-50px);
     /* stroke-opacity: 0;
     stroke: none; */
     position: sticky;
@@ -35,9 +41,10 @@
     z-index: -1;
     display: inline-block;
     opacity: 0.2;
-    }
-    
-    #speedometer .needle {
+}
+
+#speedometer .needle {
+    /* transform: translateY(-100px); */
     /* stroke-opacity: 0;
     stroke: none; */
     background-image: url("../images/speedometer/needle.svg");
@@ -48,7 +55,7 @@
     display: inline-block;
     left: 0px;
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 2.5rem;
     opacity: 0.8;
     transform: rotate(90deg);
     animation:

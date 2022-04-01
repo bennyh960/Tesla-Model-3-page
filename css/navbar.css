@@ -1,0 +1,355 @@
+:root {
+    --white:#fff;
+    --grayLight: #7f7f7f;
+    --gray: #333;
+    --font-small-size : 12px;
+    --font-normal-size : 14px;
+    --font-larger-size : 18px;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 200vh;
+    width: 100vw;
+    font-family: 'Gotham', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+li {
+    list-style: none;
+    padding: 0 4px;
+    margin: 8px 2px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--font-normal-size);
+}
+
+.hero {
+    background: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d0cecbbf-1a20-4b48-b136-fb096af19515/bvlatuR/std/2880x1800/model-3-main-hero-a-desktop') no-repeat center center/cover;
+    height: 140vh;
+    width:100vw;
+    color: var(--white);
+    position: relative;
+
+}
+
+
+.main-navbar{
+    
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    width: 100vw;
+    height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    border: red 2px solid;
+    /* flex-grow:4; */
+}
+
+
+@media screen and (max-width:1200px){
+    .nav-list a{
+        /* color: transparent; */
+        /* display: none; */
+        color: violet
+        /* font-size: 100px; */
+    }
+    
+    .default-menu a{
+        color: #7f7f7f;
+    }
+
+}
+
+.nav-tesla-logo {
+    flex-basis: 10vw;
+    padding-left: 32px;
+    display: flex;
+    /* flex-grow: 0.1; */
+}
+
+.main-navbar .nav-center {
+    text-align: center;
+    display: flex;
+    /* flex-grow: 4; */
+    justify-content: center;
+    flex-basis: 60vw;
+    
+    
+}
+
+.main-navbar .nav-site {
+    border: #333 2px solid;
+    display: flex;
+    /* flex-basis: 20vw; */
+    /* flex-grow: 2; */
+    /* justify-content: right; */
+    text-align: center;
+}
+
+
+.nav-list {
+    font-size: var(--font-normal-size);
+    /* border: yellow 3px solid; */
+    position: relative;
+    top: 0;
+}
+
+
+.main-navbar .nav-list a{
+    margin: 5px 0;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    width: 100px;
+    
+}
+
+.animation-nav {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    left: 0;
+    /* left: 220px; */
+    /* display: none; */
+    /* background-color: var(--grayLight); */
+    border-radius: 10px;
+    opacity: 0.4;
+    transition: all 0.1s ease;
+}
+
+
+.main-navbar  .nav-center a:nth-child(1):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 0;
+}
+.main-navbar  .nav-center a:nth-child(2):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 16%;
+}
+.main-navbar  .nav-center a:nth-child(3):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 33%;
+}
+.main-navbar  .nav-center a:nth-child(4):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 50%;
+}
+.main-navbar  .nav-center a:nth-child(5):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 67%;
+}
+.main-navbar   .nav-center a:nth-child(6):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 84%;
+}
+
+.main-navbar   .nav-site a:nth-child(1):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 0%;
+}
+.main-navbar   .nav-site a:nth-child(2):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 33%;
+}
+.main-navbar   .nav-site a:nth-child(3):hover~.animation-nav{
+    background-color: var(--grayLight);
+    left: 66%;
+}
+
+
+
+
+.model-num {
+    text-align: center;
+    line-height: 48px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    animation: content-pop 1s 0.5s linear; 
+}
+@keyframes content-pop {
+    from {
+        top: 15%;
+        z-index: -1;
+        
+    }
+
+    to {
+        top: 10%;
+        z-index: 1;
+    }
+}
+
+.arrow-down {
+    width: 100%;
+    justify-content: center;
+    height: 73vh;
+}
+.arrow-down a i{
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+    border: blue 2px solid;
+    animation: arrow-up-down alternate infinite ease 1s ;
+}
+
+
+@keyframes arrow-up-down {
+    from {
+        top: 136vh;
+        animation-timing-function: linear;
+    }
+
+    to {
+        top: 134vh;
+    }
+}
+
+
+.side-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.side-left-nav {
+    position: fixed;
+    top: 200px;
+    left: 20px;
+    display: flex;
+    /* width: 1px;
+    height: 25px; */
+    /* background-color: var(--white); */
+    /* border-left: #7f7f7f 2 px solid; */
+}
+
+.side-left-nav span{
+    display: none;
+    transition: all ease 1s ;
+    /* font-weight: lighter; */
+    font-size: 10px;
+}
+
+.side-left-nav a:hover span{
+    padding: 0 10px;
+    display: inline;
+}
+
+.side-right-chat {
+    /* width: 10%; */
+    height: 50%;
+    align-self: flex-end;
+    text-align: end;
+    position: fixed;
+    top: 200px;
+    margin: 0 50px;
+    border: 2px rgb(30, 145, 95) solid;
+    display: flex;
+    
+}
+
+.side-right-chat a  {
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+.content-header {
+    /* border: green 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin: auto;
+    position: absolute;
+    left: 25%;
+    top: 10vh;
+    animation: content-pop 1s 0.5s linear; 
+    
+}
+
+/* basicly its almost the same as model num -pop */
+@keyframes content-pop {
+    from {
+        top: 15vh;
+        z-index: -1;
+        
+    }
+
+    to {
+        top: 10vh;
+        z-index: 1;
+    }
+}
+
+.content-header ul {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    line-height: 1.6;
+    /* width: 500px; */
+}
+
+.content-header li {
+    flex-shrink: 0;
+    flex-grow: 1;
+    border: 2px blue solid;
+    text-align: center;
+    align-self: center;
+    margin: 10px 25px;
+    font-size: 10px;
+    width: 150px;
+}
+
+.content-header ul h3{
+    font-size: calc(3px + var(--font-larger-size));
+    font-weight: bolder;
+}
+
+
+.content-header .btn{
+    border: var(--white) 3px solid;
+    border-radius: 20px;
+}
+.content-header .btn:hover{
+    border: var(--white) 3px solid;
+    color: var(--gray);
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+
+
+.speedometer-text {
+    /* display: flex; */
+    position: relative;
+    top: 40px;
+    left: -50px;
+}
+.speedometer-text div {
+    /* display: flex; */
+    font-size: small;
+    position: relative;
+    top: 5px;
+    left: -80px;
+}
+
+
