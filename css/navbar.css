@@ -40,6 +40,7 @@ a{
     width:100vw;
     color: var(--white);
     position: relative;
+    border: 2px solid brown;
 
 }
 
@@ -53,7 +54,7 @@ a{
     height: 56px;
     justify-content: space-between;
     align-items: center;
-    border: red 2px solid;
+    /* border: red 2px solid; */
     /* flex-grow:4; */
 }
 
@@ -90,7 +91,7 @@ a{
 }
 
 .main-navbar .nav-site {
-    border: #333 2px solid;
+    /* border: #333 2px solid; */
     display: flex;
     /* flex-basis: 20vw; */
     /* flex-grow: 2; */
@@ -197,7 +198,7 @@ a{
 .arrow-down {
     width: 100%;
     justify-content: center;
-    height: 73vh;
+    /* height: 70vh; */
 }
 .arrow-down a i{
     color: var(--white);
@@ -205,19 +206,19 @@ a{
     text-align: center;
     position: relative;
     opacity: 0.8;
-    border: blue 2px solid;
-    animation: arrow-up-down alternate infinite ease 1s ;
+    /* border: blue 2px solid; */
+    animation: arrow-up-down alternate infinite ease-in-out 1s ;
 }
 
 
 @keyframes arrow-up-down {
     from {
-        top: 136vh;
+        top: 132vh;
         animation-timing-function: linear;
     }
 
     to {
-        top: 134vh;
+        top: 130vh;
     }
 }
 
@@ -253,24 +254,30 @@ a{
 }
 
 .side-right-chat {
-    /* width: 10%; */
-    height: 50%;
+    height: 80%;
     align-self: flex-end;
     text-align: end;
     position: fixed;
-    top: 200px;
+    top: 5px;
     margin: 0 50px;
-    border: 2px rgb(30, 145, 95) solid;
+    /* border: 2px rgb(30, 145, 95) solid; */
     display: flex;
     
 }
 
 .side-right-chat a  {
     align-self: flex-end;
-    padding: 10px;
-    border-radius: 50%;
-    background: var(--white);
 }
+
+.side-right-chat a .fa-brands{
+    border-radius: 50%;
+    padding: 10px;
+    background: var(--white);
+    border: 0.1px #7f7f7f solid;
+    box-shadow: 0.5px 0.5px #9f9f9f;
+
+}
+
 
 .content-header {
     /* border: green 2px solid; */
@@ -281,7 +288,7 @@ a{
     margin: auto;
     position: absolute;
     left: 25%;
-    top: 10vh;
+    top: 30vh;
     animation: content-pop 1s 0.5s linear; 
     
 }
@@ -289,13 +296,13 @@ a{
 /* basicly its almost the same as model num -pop */
 @keyframes content-pop {
     from {
-        top: 15vh;
+        top: 25vh;
         z-index: -1;
         
     }
 
     to {
-        top: 10vh;
+        top: 30vh;
         z-index: 1;
     }
 }
@@ -303,18 +310,20 @@ a{
 .content-header ul {
     display: flex;
     height: 100px;
+    /* width: 200px; */
     justify-content: center;
     line-height: 1.6;
-    /* width: 500px; */
+    /* width: 600px; */
+    /* border: 2px blue solid; */
 }
 
 .content-header li {
     flex-shrink: 0;
     flex-grow: 1;
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     text-align: center;
     align-self: center;
-    margin: 10px 25px;
+    margin: 10px 5px;
     font-size: 10px;
     width: 150px;
 }
@@ -328,6 +337,8 @@ a{
 .content-header .btn{
     border: var(--white) 3px solid;
     border-radius: 20px;
+    width: 200px;
+    padding: 5px 0;
 }
 .content-header .btn:hover{
     border: var(--white) 3px solid;

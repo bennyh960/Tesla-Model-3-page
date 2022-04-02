@@ -1,0 +1,177 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-shasi {
+    height: 100vh;
+    flex: 1 1 800px;
+    background:url('https://tesla-cdn.thron.com/delivery/public/image/tesla/ea753653-02a2-4206-aac5-82a33a0a245d/bvlatuR/std/2880x1800/model-3-hero-a-desktop') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-shasi {
+    border: black solid 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin: 20px;
+    /* display: flex; */
+    transform: rotate(180deg);
+}
+
+
+.box-shasi.box-1 {
+    position: relative;
+    top: -50px;
+}
+.box-shasi.box-2 {
+    position: relative;
+    left: -190px;
+}
+
+.box-shasi.box-3 {
+    transform: rotate(0deg);    
+}
+
+.box-shasi::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 3px;
+    height: 150px;
+    display: inline-block;
+    color: transparent;
+    animation: shasi 0.9s  ease-in;
+}
+
+@keyframes shasi {
+    0% {
+        height: 0;
+        color: transparent;
+       
+    }
+    
+    50% {
+        height: 10px;
+        color: transparent;
+    }
+    
+    100% {
+        height: 90px;
+    }
+}
+
+.box-shasi.box-1::before{
+    height: 80px;
+}
+
+.box-shasi.box-1::after{
+    content: "Rigid Structure";
+    /* color: transparent; */
+    position: absolute;
+    width: 200px;
+    transform: rotate(180deg);
+    top: 70px;
+    left: -210px;
+    animation: shasi-2 3s  ease-out;
+}
+.box-shasi.box-3::after{
+    content: "Very Low Rollover Risk";
+    position: absolute;
+    width: 200px;
+    top: 140px;
+    left: 15px;
+    animation: shasi-2 3s   ease-out;
+}
+.box-shasi.box-2::after{
+    content: "Impact Protection";
+    position: absolute;
+    width: 200px;
+    top: 140px;
+    left: -210px;
+    transform: rotate(180deg);
+    animation: shasi-2 3s  ease-out;
+}
+
+@keyframes shasi-2 {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: transparent;
+    }
+
+    100% {
+        color: #393c41;
+    }
+}
+
+.content-safety {
+    flex: 1 1 400px;
+    padding: 30px 10px;
+    line-height: 25px;
+    color: #393c41;
+    font-weight: 400;
+    animation: shasi-2 1s  ease-out;
+    
+}
+
+
+.content-safety a {
+    color: #393c41;
+    text-decoration: underline;
+    animation: shasi-2 1s  ease-out;
+}
+
+.content-safety h2 {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.safety-btns-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    align-items: center;
+}
+
+.safety-btns-container a {
+    text-decoration: none;
+}
+.order-btn {
+    border: black 2px solid;
+    width: 45%;
+    border-radius: 15px;
+    padding: 3px;
+    text-align: center;
+}
+
+.btn-plus {
+    margin: 5px 0;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 20px;
+    border: black 2px solid;
+    border-radius: 50%;
+}
+
+.btn-plus:hover,
+.order-btn:hover {
+    color: var(--white);
+    background-color: black;
+}
+
+.fa-solid {
+    transform: translate(-20px,30px);
+}
+
+
+
