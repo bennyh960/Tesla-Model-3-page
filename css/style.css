@@ -71,10 +71,8 @@ a{
 
 
 @media screen and (max-width:1200px){
-    .hero {
+    .hero.img {
        display: flex;
-       /* height: 80%;
-       width: 90%; */
        
     }
     .nav-list a {
@@ -91,7 +89,6 @@ a{
     .main-navbar  .nav-site a:nth-child(n):hover~.animation-nav,
     .main-navbar  .nav-site a:nth-child(n):hover~.animation-nav{
         display: none;
-        /* background-color: transparent; */
     }
     
     .nav-list #static {
@@ -101,11 +98,6 @@ a{
         border-radius: 15px;
     }
 
-    .nav-tesla-logo {
-        transform: scale(10);
-        position: relative;
-        left: -100px;
-    }
 
     .content-header {
         transform: scale(0.5);
@@ -136,15 +128,13 @@ a{
     
     .btn {
         padding: 0 100px;
-        /* color: red; */
     }
 }
 
 .nav-tesla-logo {
-    flex-basis: 10vw;
+    width: 150px;
     padding-left: 32px;
-    display: flex;
-    /* flex-grow: 0.1; */
+    
 }
 
 .main-navbar .nav-center {
@@ -344,9 +334,10 @@ a{
     justify-content: center;
     align-items: flex-end;
     height: 100vh;
+    width: 100%;
     margin: auto;
     position: absolute;
-    left: 25%;
+    /* left: 25%; */
     top: 30vh;
     animation: content-pop 1s 0.5s linear;   
 }
