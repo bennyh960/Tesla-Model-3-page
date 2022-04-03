@@ -71,8 +71,16 @@ a{
 
 
 @media screen and (max-width:1200px){
+    .hero {
+        width: 414px;
+        height: 896px;
+    }
+
     .hero.img {
        display: flex;
+       width: 100%;
+       /* background-size: 100% 100%; */
+       background-size: cover;
        
     }
     .nav-list a {
@@ -101,19 +109,23 @@ a{
 
     .content-header {
         transform: scale(0.5);
+        position: relative;
     }
-
+    
     .content-header ul, .content-page-3 ul{
+        width: 100%;
         flex-wrap: wrap;
-        left: -200px;
         flex: 1 1 100vw;
+        position: absolute;
+        top: 300px;
+        left: 25%;
+        margin: auto;
     }
 
     #barometer-icon {
         position: relative;
         left:-200px ;
         top: 230px;
-        /* border:2px solid red; */
     }
 
     .speedometer-text h3{
@@ -227,8 +239,9 @@ a{
     text-align: center;
     line-height: 48px;
     position: absolute;
+    width: 100vw;
     top: 10%;
-    left: 45%;
+    /* border: 3px solid black; */
     animation: content-pop 1s 0.5s linear; 
 }
 @keyframes content-pop {
@@ -360,12 +373,9 @@ a{
 .content-page-3 ul {
     display: flex;
     height: 150px;
-    
-    /* width: 200px; */
+    width: fit-content;
     justify-content: center;
     line-height: 1.6;
-    /* width: 600px; */
-    /* border: 2px blue solid; */
     
 }
 
